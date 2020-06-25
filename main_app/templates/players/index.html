@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Player List</h1>
+
+{% for player in players %}
+  <div class="card">
+    <a href="{% url 'detail' player.id %}">
+    <div class="card-content">
+      <span class="card-title">{{ player.name }}</span>
+      <p>Position: {{ player.position }}</p>
+      <p>Country: {{ player.country }}</p>
+      {% if player.age > 0 %}
+        <p>Age: {{ player.age }}</p>
+      {% else %}
+        <p>Age: Player</p>
+      {% endif %}
+    </div>
+  </div>
+{% endfor %}
+
+{% endblock %}
