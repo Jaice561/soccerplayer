@@ -11,4 +11,4 @@ This app is fully athenticate, I might decide to change the css because I'm usin
 - Django
 
 # Next Steps
--Add a soccer player API
+- Add a soccer player API
